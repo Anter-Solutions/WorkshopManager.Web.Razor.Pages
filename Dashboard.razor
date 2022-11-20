@@ -1,0 +1,28 @@
+﻿@page "/"
+@using WorkshopManager.CoreClient.Abstractions.Auth
+@using WorkshopManager.Web.Razor.Comps.Shared
+@inject AuthenticationStateProvider authStateProvider
+
+<PageTitle>Dashboard</PageTitle>
+
+@if(string.IsNullOrEmpty(Username))
+{
+    <PageLoader />
+}
+else
+{
+    <h2>Hello, @Username!</h2>
+}
+
+
+@code {
+    public string Username { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authStateProvider.GetAuthenticationStateAsync();
+        Username = authState.User.Identity.Name;
+        StateHasChanged();
+        await base.OnInitializedAsync();
+    }
+}

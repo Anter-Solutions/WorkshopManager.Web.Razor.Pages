@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\WorkshopManager.Web.Razor.Pages.props" />
+</Project>

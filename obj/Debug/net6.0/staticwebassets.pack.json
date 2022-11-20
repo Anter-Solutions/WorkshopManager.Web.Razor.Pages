@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projects\\Personal\\Anter\\WorkshopManager\\Solution\\WorkshopManager\\WorkshopManager.Web.Razor.Pages\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WorkshopManager.Web.Razor.Pages.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WorkshopManager.Web.Razor.Pages.bundle.scp.css"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.WorkshopManager.Web.Razor.Pages.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.WorkshopManager.Web.Razor.Pages.props",
+      "PackagePath": "build\\WorkshopManager.Web.Razor.Pages.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.WorkshopManager.Web.Razor.Pages.props",
+      "PackagePath": "buildMultiTargeting\\WorkshopManager.Web.Razor.Pages.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.WorkshopManager.Web.Razor.Pages.props",
+      "PackagePath": "buildTransitive\\WorkshopManager.Web.Razor.Pages.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

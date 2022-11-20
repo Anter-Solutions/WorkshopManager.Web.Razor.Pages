@@ -1,0 +1,83 @@
+﻿@page "/auth/login"
+@using WorkshopManager.CoreClient.Abstractions.Auth
+@using WorkshopManager.Infrastructure.DTOs.Auth
+@using WorkshopManager.Web.Razor.Pages.Layouts
+@layout AuthLayout
+@inject IAuthManager authManager
+@inject NavigationManager navManager
+@inject NotificationService notifService
+@inject AuthenticationStateProvider authStateProvider
+@attribute [AllowAnonymous]
+
+<PageTitle>Authorization</PageTitle>
+
+<RadzenHeading Text="Authorization" />
+
+<hr />
+
+<EditForm Model="@LoginModel" class="login-form" OnValidSubmit="HandleValidSubmit">
+    <div class="login-form__control">
+        <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Username</RadzenText>
+        <RadzenTextBox Disabled="@_isLoading" @bind-Value="@LoginModel.Username" Placeholder="Username" />
+    </div>
+    <div class="login-form__control">
+        <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Password</RadzenText>
+        <RadzenPassword Disabled="@_isLoading" @bind-Value="@LoginModel.Password" Placeholder="Password" />
+    </div>
+    <div class="login-form__control">
+        <div>
+            <RadzenCheckBox Disabled="@_isLoading" @bind-Value="@LoginModel.DoNotSignOut" TValue="bool" Name="DoNotSignOut" />
+            <RadzenLabel Text="Do not sign me out" Component="DoNotSignOut"/>
+        </div>
+        
+    </div>
+    <div class="login-form__control">
+        <RadzenButton Disabled="@_isLoading" ButtonType="ButtonType.Submit">Log In</RadzenButton>
+    </div>
+</EditForm>
+
+<style>
+    .login-form{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+    .login-form__control{
+        display:flex;
+        flex-direction:column;
+    }
+</style>
+
+@code {
+    public LoginDTO LoginModel { get; set; } = new();
+
+    private bool _isLoading = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authStateProvider.GetAuthenticationStateAsync();
+        if (authState.User.Identity.IsAuthenticated)
+        {
+            navManager.NavigateTo("/");
+            return;
+        }
+        await base.OnInitializedAsync();
+    }
+
+    public async Task HandleValidSubmit()
+    {
+        _isLoading = true;
+        StateHasChanged();
+        Console.WriteLine("Logging in...");
+        var authResult = await authManager.SignInAsync(LoginModel);
+        if(authResult)
+        {
+            navManager.NavigateTo("/");
+            return;
+        }
+        _isLoading = false;
+        StateHasChanged();
+        NotificationMessage notifMessage = new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Login failed", Detail = "Invalid username or password" };
+        notifService.Notify(notifMessage);
+    }
+}

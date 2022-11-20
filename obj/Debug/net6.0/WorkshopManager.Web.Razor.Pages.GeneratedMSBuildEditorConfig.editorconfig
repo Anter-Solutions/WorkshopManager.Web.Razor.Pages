@@ -1,0 +1,37 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property.RootNamespace = WorkshopManager.Web.Razor.Pages
+build_property.RootNamespace = WorkshopManager.Web.Razor.Pages
+build_property.ProjectDir = D:\Projects\Personal\Anter\WorkshopManager\Solution\WorkshopManager\WorkshopManager.Web.Razor.Pages\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Projects\Personal\Anter\WorkshopManager\Solution\WorkshopManager\WorkshopManager.Web.Razor.Pages
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Projects/Personal/Anter/WorkshopManager/Solution/WorkshopManager/WorkshopManager.Web.Razor.Pages/Auth/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = QXV0aFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Personal/Anter/WorkshopManager/Solution/WorkshopManager/WorkshopManager.Web.Razor.Pages/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = RGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Personal/Anter/WorkshopManager/Solution/WorkshopManager/WorkshopManager.Web.Razor.Pages/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/Personal/Anter/WorkshopManager/Solution/WorkshopManager/WorkshopManager.Web.Razor.Pages/Layouts/AuthLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0c1xBdXRoTGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-5nfkdg0oo7
+
+[D:/Projects/Personal/Anter/WorkshopManager/Solution/WorkshopManager/WorkshopManager.Web.Razor.Pages/Layouts/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0c1xNYWluTGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-n4kv4x4wi6

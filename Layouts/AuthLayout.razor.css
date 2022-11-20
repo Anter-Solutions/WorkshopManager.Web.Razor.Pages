@@ -1,0 +1,12 @@
+﻿.auth-wrapper {
+    height: 100vh;
+    width: 100%;
+}
+
+.auth-wrapper .auth-wrapper__card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:350px;
+}
